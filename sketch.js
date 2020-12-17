@@ -12,6 +12,7 @@ var score;
 var gameOverImg,restartImg
 var jumpSound , checkPointSound, dieSound
 var life= 100;
+var ad,adI
 function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
   trex_collided = loadAnimation("trex_collided.png");
@@ -26,7 +27,7 @@ function preload(){
   obstacle4 = loadImage("obstacle4.png");
   obstacle5 = loadImage("obstacle5.png");
   obstacle6 = loadImage("obstacle6.png");
-  
+  adI = loadimage("LOL.jpg");
 
   restartImg = loadImage("restart.png")
   gameOverImg = loadImage("gameOver.png")
@@ -37,7 +38,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(600, 200);
+  createCanvas(600, 300);
 
   var message = "This is a message";
  console.log(message)
@@ -81,8 +82,8 @@ function draw() {
   background(180);
   //displaying score
   text("Score: "+ score, 500,50);
-  
-  
+  var ad = createSprite(300,250,10,10):
+  ad.addImage(adI);
   if(gameState === PLAY){
 
     gameOver.visible = false;
